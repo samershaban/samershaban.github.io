@@ -2910,7 +2910,7 @@ input, select, textarea {
 		padding: 9em 0 9em 0 ;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("../../images/pic01.jpg");
+		background-image: url("../../images/picgothics.jpg");
 		background-size: cover;
 		background-position: top left,						center center,					center center;
 		/* background-size: auto,							cover,							cover; */
@@ -3107,7 +3107,7 @@ input, select, textarea {
 		background-color: #8e8e8e;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("../../images/header.jpg");
+		background-image: url("../../images/picgothics.jpg");
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		text-align: center;
