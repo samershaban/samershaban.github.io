@@ -1,5 +1,4 @@
-Hello
-I am Samer Shaban
+Hello, I am Samer Shaban
 This is my personal portfolio
 
 Credits:
