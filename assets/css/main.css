@@ -3107,7 +3107,7 @@ input, select, textarea {
 		background-color: #8e8e8e;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("../../images/picgothics.jpg");
+		background-image: url("../../images/header.jpg");
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		text-align: center;
@@ -3231,7 +3231,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 6em 0 6em 0 ;
+				padding: 3em 0 3em 0 ;
 			}
 
 	}
