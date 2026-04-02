@@ -1,185 +1,215 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Samer Shaban</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Samer Shaban</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body>
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner" >
-					<span class="icon solid major fa-code"></span>
-					<h1>Hi, I'm <strong>Samer Shaban</strong></h1>
-					<h2>a Software Engineer</h2>
-					<ul class="actions special">
-						<li><a href="#bio" class="button scrolly">Explore</a></li>
-					</ul>
-				</div>
-			</section>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">S.S.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#photos">Photos</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+    <span class="icon" id="themeIcon">☀️</span>
+  </button>
+</nav>
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  const stored = localStorage.getItem('theme');
+  if (stored === 'light') { document.body.classList.add('light-mode'); icon.textContent = '🌙'; }
+  toggle.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-mode');
+    icon.textContent = isLight ? '🌙' : '☀️';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+</script>
 
-		<!-- bio -->
-			<section id="bio" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-8 col-12-medium">
-							<p>I am driven by the motive to create applications that positively impact people's lives.
-								I have a focus in front end development and backend development with a eye for design and a will to learn new things. <br/>
-								When im not coding you can find me reading, working out, and often immersed in nature hiking. Check out some of my projects and photos below!</p>
-						</div>
-						<div class="col-4 col-12-medium imp-medium">
-							<h3>Experience</h3>
-								<li>Software Engineer at Cigna</li>
-								<li>Software Engineer at Lifion by ADP</li>
-								<li>Application Developer at ADP</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Fit Application<br />
-								</h2>
-							</header>
-							<p>Created a full stack application which allows users to create a custom workout schedule and track progress
-								Developed using many technologies including React JS, Java SpringBoot, SQL, Okta</p>
-								<ul class="actions special">
-									<li><a href="https://react-fit-app-631cc6edc570.herokuapp.com/" class="button">More</a></li>
-								</ul>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/Pic04.png" alt="" /></span>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section id="one.2" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/pic01.png" alt="" /></span>
-						</div>
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Notes Application<br />
-								</h2>
-							</header>
-							<p>Created a FullStack application in Angular/NodeJS that allows users to sign up and save their personal notes. 
-								Allowed users to sign in with Google for ease of access.</p>
-								<ul class="actions special">
-									<li><a href="https://samer-notes.herokuapp.com/" class="button">More</a></li>
-								</ul>
-						</div>
-						
-					</div>
-				</div>
-			</section>
+<!-- HERO -->
+<section class="hero" id="home">
+  <p class="hero-eyebrow">Software Engineer</p>
+  <h1>Samer<br /><em>Shaban</em></h1>
+  <p class="hero-sub">Building applications that positively impact people's lives — with a focus on full-stack development and an eye for design.</p>
+  <a href="#about" class="hero-cta">Explore my work →</a>
+  <div class="scroll-line">Scroll to explore</div>
+</section>
 
-			<section id="one.3" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Weather Forecast Android App<br />
-								</h2>
-							</header>
-							<p>Developed a native Android application which gets weather information in user's current location.
-								Displays temperature, precipitation, humidity, etc in an organized interface.</p>
-								<!-- <ul class="actions special">
-									<li><a href="#" class="button">More</a></li>
-								</ul> -->
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/pic02.png" alt="" /></span>
-						</div>
-					</div>
-				</div>
-			</section>
+<!-- ABOUT -->
+<section id="about" style="padding: 6rem 2.5rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Driven by impact,<br /><em style="font-family:'Playfair Display',serif; font-style:italic; color:var(--accent)">guided by craft</em></h2>
+        <p>I'm a full-stack software engineer with expertise in both frontend and backend development. I thrive at the intersection of thoughtful engineering and intentional design.</p>
+        <p>When I'm not coding, you'll find me out on a trail, deep in a book, or pushing my limits at the gym. Nature keeps me grounded; code keeps me curious.</p>
+      </div>
+      <div>
+        <p class="section-label" style="margin-bottom:1.5rem;">Experience</p>
+        <ul class="exp-list">
+          <li class="exp-item">
+            <div class="exp-dot"></div>
+            <div>
+              <p class="exp-role">Software Engineer</p>
+              <p class="exp-company">JPMorgan Chase</p>
+            </div>
+          </li>
+          <li class="exp-item">
+            <div class="exp-dot"></div>
+            <div>
+              <p class="exp-role">Software Engineer</p>
+              <p class="exp-company">Cigna</p>
+            </div>
+          </li>
+          <li class="exp-item">
+            <div class="exp-dot"></div>
+            <div>
+              <p class="exp-role">Software Engineer</p>
+              <p class="exp-company">Lifion by ADP</p>
+            </div>
+          </li>
+          <li class="exp-item">
+            <div class="exp-dot"></div>
+            <div>
+              <p class="exp-role">Application Developer</p>
+              <p class="exp-company">ADP</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Two -->
-			<section id="two" class="main style2">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-12 col-12-medium">
-							<ul class="major-icons">
-								<li><span class="icon solid style7 major fa-code"></span></li>
-								<li><span class="icon solid style7 major fa-camera-retro"></span></li>
-								<li><span class="icon solid style7 major fa-desktop"></span></li>
-								<li><span class="icon solid style7 major fa-mountain"></span></li>
-							</ul>
-						</div>
-						
-					</div>
-				</div>
-			</section>
+<!-- SKILLS STRIP -->
+<div class="skills-strip">
+  <div class="skills-inner">
+    <div class="skill-item"><span class="skill-dot"></span>React JS</div>
+    <div class="skill-item"><span class="skill-dot"></span>Angular</div>
+    <div class="skill-item"><span class="skill-dot"></span>Node.js</div>
+    <div class="skill-item"><span class="skill-dot"></span>Java Spring Boot</div>
+    <div class="skill-item"><span class="skill-dot"></span>SQL</div>
+    <div class="skill-item"><span class="skill-dot"></span>Android (Native)</div>
+    <div class="skill-item"><span class="skill-dot"></span>Okta</div>
+    <div class="skill-item"><span class="skill-dot"></span>REST APIs</div>
+  </div>
+</div>
 
-		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Photos</h2>
-					</header>
-					<p>I seek serenity in nature, pushing physical and mental limits, and exploring new landscapes. <br/>These are some of my photos.</p>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/picwhitney2.jpg" alt="" /></span>
-							<h3>Mt Whitney, CA</h3>
-							<p>Highest mountain in the contiguous United States has some spectacular views</p>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pichaystack.jpg" alt="" /></span>
-							<h3>Adirondack Mountains, NJ</h3>
-							<p>Hiking along a ridge in the Adirondacks</p>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/picwhitemtns.jpg" alt="" /></span>
-							<h3>White Mountains, NH</h3>
-							<p>Early spring in the white mountains.</p>
-						</div>
-					</div>
-				</div>
-			</section>
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="projects-inner">
+    <p class="section-label">Projects</p>
+    <h2>Selected work</h2>
 
-		<!-- Four -->
-			<!-- <section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Ipsum feugiat consequat?</h2>
-					</header>
-					<p>Sed lacus nascetur ac ante amet sapien.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button wide primary">Sign Up</a></li>
-						<li><a href="#" class="button wide">Learn More</a></li>
-					</ul>
-				</div>
-			</section> -->
+    <div class="project-card">
+      <div>
+        <p class="project-tag">Full Stack · Web</p>
+        <h3>Fit Application</h3>
+        <p>A full-stack workout tracker that lets users build custom schedules and log their progress over time.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React JS</span>
+          <span class="tech-tag">Java Spring Boot</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">Okta</span>
+        </div>
+        <a href="https://react-fit-app-631cc6edc570.herokuapp.com/" target="_blank" class="project-link">View project →</a>
+      </div>
+      <div class="project-img">
+        <div class="project-img-placeholder"><img src="images/Pic04.png" alt="" style="width:100%;height:100%;object-fit:contain;" /></div>
+      </div>
+    </div>
 
+    <!-- <div class="project-card reverse">
+      <div>
+        <p class="project-tag">Full Stack · Web</p>
+        <h3>Notes Application</h3>
+        <p>A personal notes app with Google OAuth sign-in for frictionless access. Users can create, save, and manage notes in a clean, distraction-free interface.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Google OAuth</span>
+        </div>
+        <a href="https://samer-notes.herokuapp.com/" target="_blank" class="project-link">View project →</a>
+      </div>
+      <div class="project-img">
+        <div class="project-img-placeholder">Notes</div>
+      </div>
+    </div>
 
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="https://linkedin.com/in/samer-shaban" target="_blank" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-					<li><a href="https://github.com/samershaban" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto: ss2749@scarletmail.rutgers.edu" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</section>
+    <div class="project-card">
+      <div>
+        <p class="project-tag">Mobile · Android</p>
+        <h3>Weather Forecast App</h3>
+        <p>A native Android app that detects the user's location and surfaces real-time weather data — temperature, precipitation, humidity — in a clean, organized layout.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Android (Native)</span>
+          <span class="tech-tag">Location API</span>
+          <span class="tech-tag">Weather API</span>
+        </div>
+      </div>
+      <div class="project-img">
+        <div class="project-img-placeholder">Weather</div>
+      </div>
+    </div> -->
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- PHOTOS -->
+<section id="photos" style="padding:6rem 2.5rem; background: var(--dark);">
+  <div class="photos-inner">
+    <p class="section-label">Photography</p>
+    <h2>Out in the wild</h2>
+    <p class="photos-sub">I find clarity in nature — pushing limits on trails, exploring new landscapes.</p>
+    <div class="photo-grid">
+      <div>
+        <div class="photo-frame">
+          <img src="images/picwhitney2.jpg" alt="Mt Whitney, CA" onerror="this.style.display='none';this.parentElement.querySelector('.photo-placeholder').style.display='flex'" />
+          <div class="photo-placeholder" style="display:none;">▲</div>
+        </div>
+        <p class="photo-caption">Mt Whitney, CA</p>
+        <p class="photo-loc">Highest peak in the contiguous US</p>
+      </div>
+      <div>
+        <div class="photo-frame">
+          <img src="images/pichaystack.jpg" alt="Adirondack Mountains" onerror="this.style.display='none';this.parentElement.querySelector('.photo-placeholder').style.display='flex'" />
+          <div class="photo-placeholder" style="display:none;">▲</div>
+        </div>
+        <p class="photo-caption">Adirondack Mountains, NY</p>
+        <p class="photo-loc">Ridge hiking in the Adirondacks</p>
+      </div>
+      <div>
+        <div class="photo-frame">
+          <img src="images/picwhitemtns.jpg" alt="White Mountains, NH" onerror="this.style.display='none';this.parentElement.querySelector('.photo-placeholder').style.display='flex'" />
+          <div class="photo-placeholder" style="display:none;">▲</div>
+        </div>
+        <p class="photo-caption">White Mountains, NH</p>
+        <p class="photo-loc">Early spring in the Whites</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-	</body>
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-inner">
+    <span class="footer-name">Samer Shaban</span>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/samer-shaban" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/samershaban" target="_blank">GitHub</a></li>
+      <li><a href="mailto:ss2749@scarletmail.rutgers.edu">Email</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Samer Shaban</span>
+  </div>
+</footer>
+
+</body>
 </html>
