@@ -26,6 +26,15 @@ body.light-mode {
   --text-muted: rgba(26,26,24,0.6);
   --border: rgba(26,26,24,0.1);
 }
+body.light-mode .nav-links a { color: rgba(26,26,24,0.65); }
+body.light-mode .hero-sub { color: rgba(26,26,24,0.6); }
+body.light-mode .scroll-line { color: rgba(26,26,24,0.35); }
+body.light-mode .about-text p { color: rgba(26,26,24,0.65); }
+body.light-mode .exp-item { border-bottom-color: rgba(26,26,24,0.1); }
+body.light-mode .exp-item:first-child { border-top-color: rgba(26,26,24,0.1); }
+body.light-mode .exp-company { color: rgba(26,26,24,0.5); }
+body.light-mode .photos-sub { color: rgba(26,26,24,0.55); }
+body.light-mode .photo-loc { color: rgba(26,26,24,0.45); }
 body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: var(--white); font-size: 16px; line-height: 1.7; scroll-behavior: smooth; }
 
 /* THEME TOGGLE */
@@ -105,10 +114,11 @@ body.light-mode .projects-section { --projects-bg: #f0ede6; }
 .photo-loc { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
 /* FOOTER */
-footer { background: #0e0e0c; padding: 3rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.06); }
+footer { background: var(--footer-bg, #0e0e0c); padding: 3rem 2.5rem; border-top: 1px solid var(--border); }
+body.light-mode footer { --footer-bg: #e8e3da; }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
 .footer-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--accent); }
 .footer-links { display: flex; gap: 1.5rem; list-style: none; }
-.footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
 .footer-links a:hover { color: var(--accent); }
-.footer-copy { color: rgba(255,255,255,0.2); font-size: 0.8rem; }
+.footer-copy { color: var(--text-muted); font-size: 0.8rem; opacity: 0.6; }
